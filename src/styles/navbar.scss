@@ -1,0 +1,121 @@
+.card {
+    padding: 0;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    z-index: 10;
+
+    .nav__brand {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+
+        .title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-left: 1.5rem;
+            color: white;
+            font-size: 20px;
+
+            img {
+                padding: 5px;
+                width: 68px;
+            }
+        }
+
+    }
+
+    .nav__list {
+        list-style-type: none;
+        display: flex;
+        gap: 50px;
+        margin-right: 1.5rem;
+        text-align: center;
+
+        .nav__item {
+            list-style: none;
+
+            a {
+                color: white;
+                font-size: 20px;
+                padding: 13px;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+    }
+
+
+    .header__menu {
+        display: none;
+        font-size: 32px;
+        min-width: 44px;
+        min-height: 44px;
+        color: white;
+        margin-right: 1.5rem;
+        text-decoration: none;
+        cursor: pointer;
+        background-color: transparent;
+        border: 0;
+
+
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        .nav__brand {
+            .header__menu {
+                display: block;
+            }
+
+            .nav__list {
+                display: none;
+                background-color: white;
+                top: 65px;
+                width: 100%;
+                position: fixed;
+
+                .nav__item {
+                    border-bottom: 1px solid black;
+
+                    a {
+                        display: block;
+                        width: 100%;
+                        padding: 10px;
+                        color: black;
+                    }
+
+                    &:hover {
+                        transform: scale(1.05);
+                        background-color: rgb(242, 91, 91);
+                    }
+                }
+            }
+
+            .nav__list.open {
+                display: block;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 499px) {
+    .card {
+        .nav__brand {
+            .nav__list {
+                display: none;
+            }
+
+            .nav__list.open {
+                display: block;
+
+            }
+        }
+
+    }
+}

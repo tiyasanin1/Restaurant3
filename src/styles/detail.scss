@@ -1,0 +1,108 @@
+.restaurant__list {
+    #detailResto {
+        text-align: center;
+
+        h3 {
+            margin-top: 10px;
+        }
+
+        .restaurant__poster {
+            width: 100%;
+        }
+
+        .restaurant__info {
+
+            p,
+            h4 {
+                margin-top: 10px;
+            }
+
+
+            .resto__description {
+                margin-left: 50px;
+                margin-right: 50px;
+                font-size: medium;
+                line-height: 2;
+            }
+        }
+
+        .menu {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+
+            .menu__foods {
+                .foods__output {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+
+
+                    p {
+                        background-color: black;
+                        color: white;
+                        border-radius: 10px;
+                        margin: 10px;
+                        padding: 5px;
+                    }
+                }
+            }
+
+            .menu__drinks {
+                .drinks__output {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+
+                    p {
+                        background-color: black;
+                        color: white;
+                        border-radius: 10px;
+                        margin: 10px;
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+
+        .review__item {
+            padding: 50px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+
+            .review__desc {
+                gap: 20px;
+
+                p {
+                    background-color: black;
+                    color: white;
+                }
+
+                h4 {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .restaurant__list {
+        #detailResto {
+            .menu {
+                grid-template-columns: 1fr;
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 499px) {
+    .restaurant__list {
+        #detailResto {
+            .review__item {
+                grid-template-columns: 1fr;
+
+            }
+        }
+    }
+}
